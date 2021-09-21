@@ -1,10 +1,13 @@
 import { useRouter } from "next/router"
+
+import Layout from "../../components/Layout";
+
 export default function DetailUser() {
     const route = useRouter();
     const { id } = route.query;
     return (
-        <div>
+        <Layout>
             <p>Detail User Page { id } </p>
-        </div>
+        </Layout>
     )
 }
