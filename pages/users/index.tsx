@@ -1,9 +1,9 @@
-
+import Layout from '../../components/Layout';
 
 export default function UserPage() {
     return (
-        <div>
+        <Layout>
             <p>Users Page</p>
-        </div>
+        </Layout>
     )
 }
