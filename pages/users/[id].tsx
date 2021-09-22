@@ -33,13 +33,13 @@ export async function getStaticPaths() {
             id: `${user.id}`,
         },
     }));
-    return{
+    return {
         paths,
         fallback: false,
     };
 }
 
-interface GetStaticProps{
+interface GetStaticProps {
     params: {
         id: string;
     }
@@ -49,10 +49,10 @@ export async function getStaticProps(context: GetStaticProps) {
     const { id } = context.params;
     const res = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
     const user = await res.json();
-    return{
+    return {
         props: {
             user,
-        }       
+        }
     }
-    
+
 }

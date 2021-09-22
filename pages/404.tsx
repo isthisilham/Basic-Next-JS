@@ -2,11 +2,11 @@ import { useEffect } from "react"
 import { useRouter } from "next/router"
 
 export default function Custom404() {
-    
+
     const route = useRouter();
 
     useEffect(() => {
-        setTimeout (() => {
+        setTimeout(() => {
             route.push('/');
         }, 5000);
     }, []);
